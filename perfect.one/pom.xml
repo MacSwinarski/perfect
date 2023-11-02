@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.perfect</groupId>
-	<artifactId>perfect.one</artifactId>
+	<artifactId>perfect-one</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>perfect.one</name>
 	<description>The perfect app - One</description>
@@ -36,6 +36,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+
 	</build>
 
 </project>
