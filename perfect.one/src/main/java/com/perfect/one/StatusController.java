@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
 
 @RestController
-public class HealthyController {
+public class StatusController {
 
-    @GetMapping("/healty")
-    public boolean isHealthy() throws IOException {
+    @GetMapping("/status")
+    public boolean status() throws IOException {
         return true;
     }
 }

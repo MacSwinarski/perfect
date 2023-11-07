@@ -4,7 +4,7 @@ metadata:
   name: perfect-one
 spec:
   containers:
-    - image: mswinarski/perfect-one:latest
+    - image: mswinarski/perfect-one:181d4e8
       name: perfect-one
       ports:
         - containerPort: 8080
