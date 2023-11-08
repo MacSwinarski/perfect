@@ -1,0 +1,1 @@
+docker build -t mswinarski/perfect-one:latest -t mswinarski/perfect-one:$(git log -1 --pretty=%h) .
