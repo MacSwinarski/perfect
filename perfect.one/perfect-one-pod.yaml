@@ -10,6 +10,24 @@ spec:
         - containerPort: 8080
           name: http
           protocol: TCP
+      livenessProbe:
+        httpGet:
+          port: 8080
+          path: /status/live
+        initialDelaySeconds: 5
+        timeoutSeconds: 1
+        periodSeconds: 10
+        failureThreshold: 3
+      readinessProbe:
+        httpGet:
+          port: 8080
+          path: /status/ready
+        initialDelaySeconds: 1
+        periodSeconds: 1
+
+
+
+
 
 
 

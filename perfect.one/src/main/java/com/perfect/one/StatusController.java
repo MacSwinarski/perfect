@@ -8,8 +8,13 @@ import java.io.IOException;
 @RestController
 public class StatusController {
 
-    @GetMapping("/status")
-    public boolean status() throws IOException {
+    @GetMapping("/status/live")
+    public boolean live() throws IOException {
+        return true;
+    }
+
+    @GetMapping("/status/ready")
+    public boolean ready() throws IOException {
         return true;
     }
 }
