@@ -2,10 +2,19 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: perfect-one
+  labels:
+    env: prod
 spec:
+  volumes:
+    - name: "perfect-one-data"
+      hostPath:
+        path: "/Users/mswinarski/Downloads/perfect-one-data"
   containers:
     - image: mswinarski/perfect-one:1e98c11
       name: perfect-one
+      volumeMounts:
+        - mountPath: "/data"
+          name: "perfect-one-data"
       ports:
         - containerPort: 8080
           name: http
