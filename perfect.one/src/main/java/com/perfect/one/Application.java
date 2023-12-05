@@ -19,6 +19,10 @@ public class Application {
 	public CommandLineRunner commandLineRunner(final ApplicationContext ctx) {
 		return args -> {
 			System.out.println("Spring Boot has defined " + ctx.getBeanDefinitionNames().length + " beans.");
+			System.out.println("-----------------------");
+			System.out.println("Env variables:");
+			System.getenv().forEach((key, value) -> System.out.println(key + "=" + value));
+			System.out.println("-----------------------");
 		};
 	}
 
