@@ -10,7 +10,7 @@ spec:
       hostPath:
         path: "/Users/mswinarski/Downloads/perfect-one-data"
   containers:
-    - image: mswinarski/perfect-one:1e98c11
+    - image: mswinarski/perfect-one:5863a56
       name: perfect-one
       volumeMounts:
         - mountPath: "/data"
@@ -33,6 +33,9 @@ spec:
           path: /status/ready
         initialDelaySeconds: 1
         periodSeconds: 1
+      envFrom:
+        - configMapRef:
+            name: postgres-config
 
 
 
