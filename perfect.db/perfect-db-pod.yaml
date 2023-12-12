@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: perfect-db
+  labels:
+    env: prod
+spec:
+  volumes:
+    - name: perfect-db-data
+      persistentVolumeClaim:
+            claimName: postgres-pv-claim
+  containers:
+    - image: postgres:10.1
+      name: postgres
+      volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: perfect-db-data
+      ports:
+        - containerPort: 5432
+      envFrom:
+        - configMapRef:
+            name: postgres-config
